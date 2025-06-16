@@ -14,8 +14,8 @@
         body {
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #4a4a4a;
+            background: linear-gradient(135deg, #ffeef8 0%, #e8d5ff 50%, #f8e8ff 100%);
             min-height: 100vh;
         }
 
@@ -27,43 +27,46 @@
 
         .hero {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
+            border-radius: 25px;
             padding: 40px;
             text-align: center;
             margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(218, 112, 214, 0.15);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 192, 203, 0.3);
         }
 
         .hero h1 {
             font-size: 3em;
             margin-bottom: 10px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #da70d6, #dda0dd, #ff69b4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 2px 4px rgba(218, 112, 214, 0.1);
         }
 
         .hero p {
             font-size: 1.3em;
-            color: #666;
+            color: #8b5a8c;
             margin-bottom: 20px;
         }
 
         .section {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
+            border-radius: 20px;
             padding: 30px;
             margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(218, 112, 214, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 192, 203, 0.2);
         }
 
         .section h2 {
-            color: #4a5568;
+            color: #8b5a8c;
             margin-bottom: 20px;
             font-size: 1.8em;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #dda0dd;
             padding-bottom: 10px;
         }
 
@@ -74,20 +77,22 @@
         }
 
         .card {
-            background: #f8fafc;
+            background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
             padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #667eea;
+            border-radius: 18px;
+            border-left: 4px solid #da70d6;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(218, 112, 214, 0.1);
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(218, 112, 214, 0.2);
+            border-left: 4px solid #ff69b4;
         }
 
         .card h3 {
-            color: #2d3748;
+            color: #8b5a8c;
             margin-bottom: 15px;
             font-size: 1.3em;
         }
@@ -98,45 +103,56 @@
         }
 
         .highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 2px 8px;
-            border-radius: 5px;
+            background: linear-gradient(120deg, #fce7f3 0%, #e8d5ff 100%);
+            padding: 3px 10px;
+            border-radius: 8px;
             font-weight: 600;
+            color: #8b5a8c;
+            border: 1px solid rgba(218, 112, 214, 0.2);
         }
 
         .progress-bar {
-            background: #e2e8f0;
-            border-radius: 10px;
-            padding: 3px;
+            background: linear-gradient(90deg, #f8d7da 0%, #e8d5ff 100%);
+            border-radius: 15px;
+            padding: 4px;
             margin: 10px 0;
+            border: 1px solid rgba(218, 112, 214, 0.2);
         }
 
         .progress {
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            height: 20px;
-            border-radius: 8px;
+            background: linear-gradient(90deg, #da70d6, #dda0dd, #ff69b4);
+            height: 25px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: bold;
             font-size: 0.9em;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .learning-path {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
             margin-top: 15px;
         }
 
         .skill-tag {
-            background: #667eea;
+            background: linear-gradient(45deg, #da70d6, #dda0dd);
             color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
+            padding: 10px 18px;
+            border-radius: 25px;
             font-size: 0.9em;
             font-weight: 500;
+            box-shadow: 0 4px 15px rgba(218, 112, 214, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(218, 112, 214, 0.4);
         }
 
         .nvidia-green {
@@ -144,9 +160,62 @@
             font-weight: bold;
         }
 
+        /* Add some sparkle effects */
+        .hero::before {
+            content: "✨";
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2em;
+            animation: sparkle 2s infinite;
+        }
+
+        .hero::after {
+            content: "💖";
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            font-size: 1.5em;
+            animation: pulse 3s infinite;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Girlie touch: add subtle patterns */
+        .section:nth-child(even) {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(253, 242, 248, 0.95) 100%);
+        }
+
+        /* Make bullets prettier */
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        ul li::before {
+            content: "💜";
+            position: absolute;
+            left: -15px;
+            font-size: 0.8em;
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
             
             .hero p {
@@ -160,6 +229,11 @@
             .hero, .section {
                 padding: 25px;
             }
+
+            .hero::before,
+            .hero::after {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -168,7 +242,6 @@
         <div class="hero">
             <h1>Hello, I'm Patrina! 👋</h1>
             <p>Partner Marketing Manager at <span class="nvidia-green">NVIDIA</span> | AI Enthusiast | Data Storyteller</p>
-            <p>Transforming complex data into strategic business outcomes, one partnership at a time</p>
         </div>
 
         <div class="grid">
@@ -176,7 +249,7 @@
                 <h2><span class="emoji">🚀</span>What I'm Currently Up To</h2>
                 <div class="card">
                     <h3>🎯 Professional Focus</h3>
-                    <p>Building scalable <span class="highlight">1:many partner enablement programs</span> at NVIDIA to support our rapidly growing AI ecosystem. I'm passionate about creating data-driven marketing strategies that help our partners succeed.</p>
+                    <p>Building scalable <span class="highlight" partner enablement programs</span> at NVIDIA to support our rapidly growing ecosystem. I'm passionate about creating data-driven marketing strategies that help our partners succeed.</p>
                 </div>
                 
                 <div class="card">
@@ -221,18 +294,13 @@
                 </div>
                 
                 <div class="card">
-                    <h3>🤝 Relationship Builder</h3>
-                    <p>Marketing isn't just about campaigns - it's about people. I believe the best partnerships are built on genuine relationships and mutual success.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>📊 Data Enthusiast</h3>
-                    <p>Give me a spreadsheet full of messy data, and I'll find the story it's trying to tell. I geek out over discovering insights that drive business decisions.</p>
+                    <h3>💖 Relationship Builder</h3>
+                    <p>I enjoy collaborating with cross-functional teams and building relationships that drive success.</p>
                 </div>
                 
                 <div class="card">
                     <h3>🎯 Goal Oriented</h3>
-                    <p>Recently diagnosed with ADHD, which actually explains my unique way of processing information and my ability to see connections others might miss. I'm learning to work with my brain, not against it!</p>
+                    <p>I have a unique way of processing information and see connections others might miss. I'm learning to work with my brain, not against it!</p>
                 </div>
             </div>
         </div>
@@ -241,9 +309,9 @@
             <h2><span class="emoji">🎯</span>Where I'm Headed</h2>
             <div class="card">
                 <h3>🚀 Career Aspirations</h3>
-                <p>I'm working toward a role in <span class="highlight">technical product marketing or product management</span> for NVIDIA's AI software stack. Think Nemotron, inference engines, generative AI - the technologies that are reshaping how we work and create.</p>
+                <p>I'm working toward a role in <span class="highlight">technical product marketing or product management</span> for NVIDIA AI Enterprise. Think agents, inference engines, generative AI - the technologies that are reshaping how we work and create.</p>
                 
-                <p style="margin-top: 15px;"><strong>My goal:</strong> Bridge the gap between cutting-edge AI technology and market needs, helping bring revolutionary AI tools to the people and organizations that need them most.</p>
+                <p style="margin-top: 15px;"><strong>My goal:</strong> Bridge the gap between cutting-edge AI technology and market needs, helping bring revolutionary AI tools to students and organizations that need them most.</p>
             </div>
         </div>
 
@@ -252,8 +320,7 @@
             <div class="card">
                 <h3>🛠️ Technical Skills I'm Building</h3>
                 <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>✅ Development environment setup (VS Code, GitHub, Anaconda)</li>
-                    <li>🔄 Python fundamentals and data analysis</li>
+                    <li>🐍 Python programming, APIs, agents</li>
                     <li>📅 NVIDIA AI Enterprise stack deep dive</li>
                     <li>📅 Docker containers and model deployment</li>
                     <li>📅 AI/ML certifications and hands-on projects</li>
@@ -261,15 +328,6 @@
                 
                 <p style="margin-top: 15px;"><em>This website itself is part of my learning journey - built from scratch as I document my path from business to technical AI expertise!</em></p>
             </div>
-        </div>
-
-        <div class="section" style="text-align: center;">
-            <h2><span class="emoji">🤝</span>Let's Connect!</h2>
-            <p>I love connecting with fellow AI enthusiasts, NVIDIA colleagues, and anyone passionate about the intersection of technology and business. Feel free to reach out!</p>
-            
-            <p style="margin-top: 20px; font-style: italic; color: #666;">
-                "The best way to predict the future is to build it" - and that's exactly what I'm doing, one line of code at a time. 💻✨
-            </p>
         </div>
     </div>
 </body>
